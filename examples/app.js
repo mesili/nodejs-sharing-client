@@ -100,7 +100,7 @@ restClient.queryTableMetadataAsync(table).then(function(metaData) {
 });
 
 // Create a DataFrame
-const reader = new DeltaSharingReader(table, restClient);
+const reader = new DeltaSharingReader(table, restClient, null, 5);
 reader.createDataFrame().then(function(df) {
   console.log('Created DataFrame')
   // Display the DataFrame 
